@@ -1,0 +1,27 @@
+<p>list-to-do works! </p><h2>{{messege}}</h2>
+<div class="container">
+    <table  class="table table-striped">
+        <caption>My list-to-do</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>targetdate</th>
+                <th>Is Done</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let todo of todos" >
+                <td>{{todo.m_Id}}</td>
+                <td>{{todo.m_stName}}</td>
+                <td>{{todo.m_stWork}}</td>
+                <td>{{todo.m_dtEndDate | date}}</td>
+                <td>{{todo.m_IIsValid}}&nbsp;&nbsp;<button class="btb btn-success" (click)="updateTodo(todo.m_Id)">Update</button> &nbsp;&nbsp;
+                <button class="btb btn-danger" (click)="deleteTodo(todo.m_Id)">delete</button></td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

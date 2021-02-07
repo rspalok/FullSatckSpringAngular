@@ -1,0 +1,9 @@
+<h1>Welcome  {{name}}</h1>
+Click to list page  <button class="btn"><a routerLink="/todos">click hare</a></button>
+<div class="container">
+    click here to call api  
+    <button class="btn btn-success" (click)="getApiData()"> click to call API </button>
+    click here to call api  
+    <button class="btn btn-success" (click)="getCallHomeCntWithPram()"> getCallHomeCntWithPram </button>
+</div>
+<div class="container"  *ngIf="welcome_message"><h3>Message </h3>  {{welcome_message}} </div>

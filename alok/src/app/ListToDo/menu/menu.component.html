@@ -1,0 +1,18 @@
+
+<header class="">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div> <a class="navbar-brand" routerLink="/login">Home {{isUserLogin}} 
+             Welcome {{name}} </a>
+        </div>
+        <ul class="navbar-nav">
+            <li><a *ngIf="this.hardCodedAuthenticationServiceService.isUserLogedIn()" class="nav-link" routerLink="todos">list-to-do</a></li>
+            <li><a *ngIf="this.hardCodedAuthenticationServiceService.isUserLogedIn()" class="nav-link" routerLink="server">server</a></li>
+            <li><a *ngIf="this.hardCodedAuthenticationServiceService.isUserLogedIn()" class="nav-link" routerLink="java/Alok">List</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li ><a *ngIf="!this.hardCodedAuthenticationServiceService.isUserLogedIn()" class="nav-link" routerLink="/login">Login</a></li>
+            <li ><a *ngIf="this.hardCodedAuthenticationServiceService.isUserLogedIn()" class="nav-link" routerLink="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header> 
+<br>
